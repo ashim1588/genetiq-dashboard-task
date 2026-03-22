@@ -1,58 +1,105 @@
-# React + TypeScript + Vite
+# Genetiq Dashboard Enhancements
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+This repository contains the implementation of **language switching** and **theme (color) switching** features for the Genetiq dashboard.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+##  Overview
 
-## Expanding the ESLint configuration
+The task was to enhance the dashboard by adding:
 
-If you are developing a production application, we recommend updating the
-configuration to enable type aware lint rules:
+-  Multi-language support
+-  Dynamic theme switching
 
-- Configure the top-level `parserOptions` property like this:
+The implementation focuses on **clean architecture, scalability, and maintainability**, aligning with the existing project structure.
 
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-			tsconfigRootDir: import.meta.dirname,
-		},
-	},
-});
-```
+---
 
-- Replace `tseslint.configs.recommended` to
-  `tseslint.configs.recommendedTypeChecked` or
-  `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install
-  [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and
-  update the config:
+##  Tech Stack
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+- React 18 + TypeScript
+- Vite
+- Redux Toolkit
+- SCSS Modules
+- i18next (for internationalization)
 
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: "18.3" } },
-	plugins: {
-		// Add the react plugin
-		react,
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs["jsx-runtime"].rules,
-	},
-});
-```
+---
+
+##  Features Implemented
+
+### 1.  Language Switching
+
+- Integrated **i18next + react-i18next**
+- Supports multiple languages:
+  - English
+  - Spanish
+  - French
+  - German
+  - Chinese
+  - Arabic
+- Language selection:
+  - Automatically detected (browser/localStorage)
+  - Persisted using `localStorage`
+- Clean translation structure for scalability
+
+---
+
+### 2.  Theme / Color Switching
+
+- Implemented global theme management using **Redux Toolkit**
+- Themes available:
+  - Light
+  - Dark
+  - Blue
+  - Green
+  - Purple
+- Theme system powered by **CSS variables**
+- Real-time UI updates on theme change
+- Theme persistence using `localStorage`
+
+---
+
+##  Architecture Decisions
+
+- **Feature-based structure** for scalability
+- Separate modules for:
+  - `I18n` (language system)
+  - `Theme` (theme system)
+  - `Dashboard Controls` (UI layer)
+- Global state managed via Redux for consistency
+- CSS variables used instead of class toggling for clean theming
+
+---
+
+
+##  Key Additions
+~~~
+src/
+├── App/
+│ ├── I18n/ # i18n configuration and language files
+│ ├── Theme/ # Theme system (Redux + CSS variables)
+│
+├── Features/
+│ └── Dashboard/
+│ ├── LanguagePicker/ # Language switch UI
+│ ├── ThemePicker/ # Theme switch UI
+│ └── DashboardControls/ # Wrapper for settings controls
+~~~
+
+
+##  Screenshots
+
+### Dashboard (Default)
+<img width="2558" height="1291" alt="Screenshot 2026-03-21 at 1 12 11 AM" src="https://github.com/user-attachments/assets/bf304ea6-6038-4fc4-a618-b695cb051700" />
+
+### Language Switching
+<img width="420" height="69" alt="Screenshot 2026-03-22 at 11 46 00 AM" src="https://github.com/user-attachments/assets/b60d4734-fc65-4abc-924e-f6914c1928ed" />
+
+### Blue Theme
+<img width="2560" height="1312" alt="Screenshot 2026-03-22 at 11 46 28 AM" src="https://github.com/user-attachments/assets/00990bc7-562a-4d03-be1b-52efc6eb0f40" />
+
+### Dark Theme
+<img width="2560" height="1317" alt="Screenshot 2026-03-22 at 11 46 13 AM" src="https://github.com/user-attachments/assets/f5a82b4b-b83a-41e5-97dd-ac2cc693dd57" />
+
+### Spanish Language
+<img width="403" height="73" alt="Screenshot 2026-03-22 at 11 45 38 AM" src="https://github.com/user-attachments/assets/3671b042-ae10-4b8b-b8a0-028b243dc224" />
