@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "仪表板",
+		"language": "语言",
+		"theme": "主题",
+		"settings": "设置"
+	},
+	"themes": {
+		"light": "浅色",
+		"dark": "深色",
+		"blue": "蓝色",
+		"green": "绿色",
+		"purple": "紫色"
+	}
+}

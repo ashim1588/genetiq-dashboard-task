@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "Dashboard",
+		"language": "Language",
+		"theme": "Theme",
+		"settings": "Settings"
+	},
+	"themes": {
+		"light": "Light",
+		"dark": "Dark",
+		"blue": "Blue",
+		"green": "Green",
+		"purple": "Purple"
+	}
+}

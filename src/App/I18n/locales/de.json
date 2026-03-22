@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "Dashboard",
+		"language": "Sprache",
+		"theme": "Thema",
+		"settings": "Einstellungen"
+	},
+	"themes": {
+		"light": "Hell",
+		"dark": "Dunkel",
+		"blue": "Blau",
+		"green": "Grün",
+		"purple": "Lila"
+	}
+}

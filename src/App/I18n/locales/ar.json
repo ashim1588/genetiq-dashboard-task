@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "لوحة القيادة",
+		"language": "اللغة",
+		"theme": "السمة",
+		"settings": "الإعدادات"
+	},
+	"themes": {
+		"light": "فاتح",
+		"dark": "داكن",
+		"blue": "أزرق",
+		"green": "أخضر",
+		"purple": "بنفسجي"
+	}
+}

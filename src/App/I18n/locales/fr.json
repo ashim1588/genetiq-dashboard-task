@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "Tableau de bord",
+		"language": "Langue",
+		"theme": "Thème",
+		"settings": "Paramètres"
+	},
+	"themes": {
+		"light": "Clair",
+		"dark": "Sombre",
+		"blue": "Bleu",
+		"green": "Vert",
+		"purple": "Violet"
+	}
+}

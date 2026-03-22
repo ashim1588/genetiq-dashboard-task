@@ -1,0 +1,15 @@
+{
+	"dashboard": {
+		"title": "Panel",
+		"language": "Idioma",
+		"theme": "Tema",
+		"settings": "Configuración"
+	},
+	"themes": {
+		"light": "Claro",
+		"dark": "Oscuro",
+		"blue": "Azul",
+		"green": "Verde",
+		"purple": "Púrpura"
+	}
+}
